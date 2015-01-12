@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 		count = 0;
 		setCountText ();
 		winText.text = "";
+		print("I'm attached to ");
 	}
 
 	void FixedUpdate ()
