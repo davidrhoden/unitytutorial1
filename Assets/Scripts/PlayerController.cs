@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
-	public GUIText countText;
-	public GUIText winText;
+	public Text countText;
+	public Text winText;
 	private int count;
 
 	void Start ()
 	{
 		count = 0;
-		setCountText ();
-		winText.text = "";
-		print("I'm attached to ");
+		setCountText();
+		winText.text = "play...";
 	}
 
 	void FixedUpdate ()
