@@ -4,18 +4,25 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
+
+
+
+
+
+
 	public float speed;
 	public Text countText;
 	public Text winText;
 	private int count;
+	public Texture myTexture;
 
 	void Start ()
 	{
 		count = 0;
 		setCountText();
-		winText.text = "play...";
+		winText.text = "";
 	}
-
+	
 	void FixedUpdate ()
 	{
 		float moveHorizontal = Input.GetAxis("Horizontal");
@@ -42,6 +49,7 @@ public class PlayerController : MonoBehaviour {
 		if (count >= 8) 
 		{
 			winText.text = "hey hey hey";
+			renderer.material.SetTexture("_MyTexture", myTexture);
 		}
 	}
 }
